@@ -196,4 +196,5 @@
     <string name="omnijaws_weather_46">Snow showers</string>
     <string name="omnijaws_weather_47">Isolated thundershowers</string>
     <string name="omnijaws_weather_3200">Not available</string>
+    <string name="omnijaws_provider_visualcrossing" translatable="false">Visual Crossing</string>
 </resources>

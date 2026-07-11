@@ -77,6 +77,7 @@ fun WeatherSettingsScreen(
     onIconThemeChanged: (String) -> Unit,
     onOwmKeyChanged: (String) -> Unit,
     onPirateWeatherKeyChanged: (String) -> Unit,
+    onVisualCrossingKeyChanged: (String) -> Unit,
     onRequestLocationPermission: () -> Unit
 ) {
     AxionScaffold(
@@ -113,6 +114,7 @@ fun WeatherSettingsScreen(
                                 "1" to stringResource(R.string.provider_metnorway),
                                 "2" to stringResource(R.string.provider_pirate_weather),
                                 "3" to stringResource(R.string.provider_openmeteo)
+                                "4" to stringResource(R.string.omnijaws_provider_visualcrossing)
                             ),
                             value = state.provider,
                             onValueChange = onProviderChanged
@@ -224,8 +226,8 @@ fun WeatherSettingsScreen(
                 }
 
                 // API section is only relevant for providers that require an API key.
-                // MET Norway (provider == "1") does not need one, so the whole section is hidden.
-                if (state.provider == "0" || state.provider == "2") {
+                // MET Norway ("1") and Open-Meteo ("3") do not need one, so the section is hidden.
+                if (state.provider == "0" || state.provider == "2" || state.provider == "4") {
                     PreferenceGroup(title = stringResource(R.string.category_api)) {
                         if (state.provider == "0") {
                             item {
@@ -244,6 +246,16 @@ fun WeatherSettingsScreen(
                                     value = state.pirateWeatherKey,
                                     emptyText = stringResource(R.string.service_disabled),
                                     onValueChange = onPirateWeatherKeyChanged
+                                )
+                            }
+                        }
+                        if (state.provider == "4") {
+                            item {
+                                EditTextPreference(
+                                    title = stringResource(R.string.omnijaws_visual_crossing_key),
+                                    value = state.visualCrossingKey,
+                                    emptyText = stringResource(R.string.omnijaws_provider_disabled),
+                                    onValueChange = onVisualCrossingKeyChanged
                                 )
                             }
                         }
@@ -266,6 +278,7 @@ private fun providerLabel(value: String): String = when (value) {
     "1" -> stringResource(R.string.provider_metnorway)
     "2" -> stringResource(R.string.provider_pirate_weather)
     "3" -> stringResource(R.string.provider_openmeteo)
+    "4" -> stringResource(R.string.omnijaws_provider_visualcrossing)
     else -> value
 }
 
