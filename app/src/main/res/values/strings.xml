@@ -49,7 +49,6 @@
     <!-- OWM / Pirate Weather / Visual Crossing API -->
     <string name="owm_key">Custom OWM key</string>
     <string name="pirate_weather_key">Pirate Weather API Key</string>
-    <string name="omnijaws_visual_crossing_key">Visual Crossing API Key</string>
     <string name="service_disabled">Disabled</string>
     <string name="omnijaws_provider_disabled">Disabled</string>
     <string name="api_key_note">Pirate Weather needs an API key provided to function, and a Custom OWM key is recommended for OpenWeatherMap. Press the \"Last update time\" field to force update and test your keys</string>
@@ -219,6 +218,7 @@
     <string name="omnijaws_weather_47">Isolated thundershowers</string>
     <string name="omnijaws_weather_3200">Not available</string>
 
+    <!-- Visual Crossing API key preference title -->
+    <string name="omnijaws_visual_crossing_key" translatable="false">Visual Crossing API key</string>
     <string name="omnijaws_provider_visualcrossing" translatable="false">Visual Crossing</string>
-
 </resources>
