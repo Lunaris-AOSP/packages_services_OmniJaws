@@ -46,10 +46,12 @@
     <string name="theme_light">Light</string>
     <string name="theme_dark">Dark</string>
 
-    <!-- OWM / Pirate Weather API -->
+    <!-- OWM / Pirate Weather / Visual Crossing API -->
     <string name="owm_key">Custom OWM key</string>
     <string name="pirate_weather_key">Pirate Weather API Key</string>
+    <string name="omnijaws_visual_crossing_key">Visual Crossing API Key</string>
     <string name="service_disabled">Disabled</string>
+    <string name="omnijaws_provider_disabled">Disabled</string>
     <string name="api_key_note">Pirate Weather needs an API key provided to function, and a Custom OWM key is recommended for OpenWeatherMap. Press the \"Last update time\" field to force update and test your keys</string>
     <string name="api_links_note"><![CDATA[Get API keys: <a href="https://pirate-weather.apiable.io/products/weather-data/plans">Pirate Weather</a> | <a href="https://openweathermap.org/price">OpenWeatherMap</a>]]></string>
 
@@ -57,10 +59,23 @@
     <string name="menu">Menu</string>
     <string name="update">Update</string>
     <string name="settings_title">Settings</string>
+    <string name="omnijaws_settings_title">Settings</string>
     <string name="temperature_low">Low</string>
     <string name="temperature_high">High</string>
     <string name="dashboard_error_subtitle">Check settings or try refreshing</string>
+    <string name="omnijaws_dashboard_error_subtitle">Check settings or try refreshing</string>
     <string name="dashboard_provider_attribution">Weather data provided by %1$s</string>
+
+    <!-- Dashboard Errors -->
+    <string name="omnijaws_error_network">No network connection</string>
+    <string name="omnijaws_error_location">Unable to determine location</string>
+    <string name="omnijaws_error_disabled">Weather service is disabled</string>
+
+    <!-- Provider names -->
+    <string name="omnijaws_provider_openweathermap" translatable="false">OpenWeatherMap</string>
+    <string name="omnijaws_provider_metnorway" translatable="false">MET Norway</string>
+    <string name="omnijaws_provider_pirate_weather" translatable="false">Pirate Weather</string>
+    <string name="omnijaws_provider_openmeteo" translatable="false">Open-Meteo</string>
 
     <!-- Forecast card -->
     <string name="forecast_card_hourly_title">Hourly forecast</string>
@@ -68,6 +83,7 @@
     <string name="forecast_show_more">Show more</string>
     <string name="forecast_show_less">Show less</string>
     <string name="forecast_today">Today</string>
+    <string name="omnijaws_hourly_now">Now</string>
 
     <!-- Detail card titles -->
     <string name="detail_feels_like">Feels like</string>
@@ -91,8 +107,14 @@
     <string name="visibility_level_good">Good</string>
     <string name="visibility_level_moderate">Moderate</string>
     <string name="visibility_level_poor">Poor</string>
+    <string name="omnijaws_visibility_level_poor">Poor</string>
+
+    <!-- Distance units -->
+    <string name="omnijaws_unit_km">km</string>
+    <string name="omnijaws_unit_mi">mi</string>
+
     <!-- %1$s is the visibility level, e.g. "km · Clear" -->
-    <string name="visibility_subtitle">km \u00b7 %1$s</string>
+    <string name="visibility_subtitle">%1$s \u00b7 %2$s</string>
 
     <!-- Dew point levels -->
     <string name="dew_point_dry">Dry</string>
@@ -133,7 +155,7 @@
 
     <!-- Widget -->
     <string name="weather_widget">Weather widget</string>
-    <string name="weather_widget_desc">"Current weather and multi-day forecast"</string>
+    <string name="weather_widget_desc">Current weather and multi-day forecast</string>
     <string name="omnijaws_service_disabled">Service disabled</string>
     <string name="omnijaws_service_error_long">Error loading weather data</string>
     <string name="omnijaws_service_error_location">No location available</string>
@@ -196,5 +218,7 @@
     <string name="omnijaws_weather_46">Snow showers</string>
     <string name="omnijaws_weather_47">Isolated thundershowers</string>
     <string name="omnijaws_weather_3200">Not available</string>
+
     <string name="omnijaws_provider_visualcrossing" translatable="false">Visual Crossing</string>
+
 </resources>

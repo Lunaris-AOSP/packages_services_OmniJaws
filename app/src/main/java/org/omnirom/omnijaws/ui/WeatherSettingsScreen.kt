@@ -113,7 +113,7 @@ fun WeatherSettingsScreen(
                                 "0" to stringResource(R.string.provider_openweathermap),
                                 "1" to stringResource(R.string.provider_metnorway),
                                 "2" to stringResource(R.string.provider_pirate_weather),
-                                "3" to stringResource(R.string.provider_openmeteo)
+                                "3" to stringResource(R.string.provider_openmeteo),
                                 "4" to stringResource(R.string.omnijaws_provider_visualcrossing)
                             ),
                             value = state.provider,
